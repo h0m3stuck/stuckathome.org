@@ -14,6 +14,38 @@
 	<link rel="stylesheet" href="/css/main.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+	<style>
+		.portfolio-desc {
+			font-size: 20px;
+			line-height: 1.2;
+			overflow: auto;
+			margin: 1em 0;
+			padding: 0 0.5em;
+		}
+
+		.list {
+			list-style: circle;
+			list-style-position: outside;
+			padding-left: 1em;
+		}
+		
+		/* The titles of the portfolio projects */
+		h3 {
+			text-align: center;
+		}
+
+		h4, h5, h6, strong {
+			font-weight: 500;
+		}
+
+		#main > section {
+			text-align: left;
+		}
+
+		#main > section.one {
+			background: url("/img/banner.png") repeat;
+		}
+	</style>
 </head>
 
 <body>
@@ -24,9 +56,6 @@
 		<div class="top">
 			<!-- Logo -->
 			<div id="logo">
-				<span class="image avatar48">
-					<img src="img/avatar.jpg" alt="" />
-				</span>
 				<h1 id="title">{{ .Site.Params.name }}</h1>
 				<p>{{ .Site.Params.description }}</p>
 			</div>
@@ -118,42 +147,63 @@
 
 				<div class="row">
 					<div class="4u 12u$(mobile)">
-						{{ range .Site.Params.portfolio1 }}
 						<article class="item">
-							<a href="{{ .url }}" class="image fit">
-								<img src="{{ .source }}" alt="{{ .alt }}" />
+							<a href="https://github.com/h0m3stuck/akira" class="image fit">
+								<img src="/img/akira.png" alt="A privacy-friendly personal assistant" />
+							
+								<h3>Akira</h3>
 							</a>
-							<header>
-								<h3>{{ .title }}</h3>
-							</header>
+							<div class="portfolio-desc">
+								<p>A <strong>privacy-friendly</strong> personal assistant, written in Python 3.</p>
+
+								<h4>Features</h4>
+								<ul class="list">
+									<li>Wakeword detection using an open-source machine-learning algorithm</li>
+									<li>Speech recognition using Google Speech APIs</li>
+									<li>Simple, modular API for adding new keywords and skills</li>
+								</ul>
+							</div>
 						</article>
-						{{ end }}
 					</div>
 
 					<div class="4u 12u$(mobile)">
-						{{ range .Site.Params.portfolio2 }}
 						<article class="item">
-							<a href="{{ .url }}" class="image fit">
-								<img src="{{ .source }}" alt="{{ .alt }}" />
+							<a href="https://github.com/h0m3stuck/duck-feed" class="image fit">
+								<img src="/img/duck-feed.png" alt="Duck Feed feed finder and reader" />
+
+								<h3>Duck Feed</h3>
 							</a>
-							<header>
-								<h3>{{ .title }}</h3>
-							</header>
+							<div class="portfolio-desc">
+								<p>A cross-platform <strong>RSS feed discoverer and reader</strong>, using DuckDuckGo to provide search results.</p>
+
+								<h4>Features</h4>
+								<ul class="list">
+									<li>Scrapes DuckDuckGo searches in the background for privacy-friendly feed discovery</li>
+									<li>Uses parallelism to find results faster</li>
+									<li>Has a built-in WebKit engine to show RSS entries as full HTML and play back video feeds</li>
+								</ul>
+							</div>
 						</article>
-						{{ end }}
 					</div>
 
 					<div class="4u 12u$(mobile)">
-						{{ range .Site.Params.portfolio3 }}
 						<article class="item">
-							<a href="{{ .url }}" class="image fit">
-								<img src="{{ .source }}" alt="{{ .alt }}" />
+							<a href="https://github.com/h0m3stuck/stuckathome.org" class="image fit">
+								<img src="/img/stuckathome.png" alt="Stuck at home website" />
+
+								<h3>This website</h3>
 							</a>
-							<header>
-								<h3>{{ .title }}</h3>
-							</header>
+
+							<div class="portfolio-desc">
+								<p>stuckathome.org.</p>
+
+								<h4>Features</h4>
+								<ul class="list">
+									<li>Uses Hugo, a static site generator</li>
+									<li>Secured with HTTPS using GitHub Pages and CloudFlare, leading static site hosting solutions :D</li>
+								</ul>
+							</div>
 						</article>
-						{{ end }}
 					</div>
 				</div>
 
@@ -169,15 +219,20 @@
 					<h2>About Us</h2>
 				</header>
 
-				<a href="#" class="image featured">
-					<img src="img/about.jpg" alt="" />
-				</a>
+				<p>We are a team of seven high school sophomores and juniors who have gone to various hackathons, including MetroHacks, MIT Blueprint 2017, HackNEHS, and LexHack.</p>
 
-				<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus ultricies curae quis et rhoncus velit. Lobortis
-					elementum aliquet nec vitae laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem parturient nulla
-					quam placerat viverra mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia donec curae mus vel quisque
-					sociis nec ornare iaculis.</p>
+				<p>We won <a href="https://devpost.com/software/akira-the-intelligent-personal-assistant">second place for Akira at LexHack</a> and third place at HackNEHS for our Litcoin project (in continued development).</p>
 
+				<p>Our team members are:</p>
+
+				<ul class="list">
+					<li>Avi Mishra, lead marketing expert</li>
+					<li>Aneesh Edara, lead front-end programmer</li>
+					<li>Dylan Kim, the wildcard</li>
+					<li>Kevin Liu, back-end expert</li>
+					<li>Kunal Sharda, <em>Java master</em></li>
+					<li>Will Hemond, apprentice front-end programmer</li>
+				</ul>
 			</div>
 		</section>
 
@@ -189,27 +244,7 @@
 					<h2>Contact</h2>
 				</header>
 
-				<p>Elementum sem parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-					donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc orci ridiculus faucibus a consectetur. Porttitor
-					curae mauris urna mi dolor.</p>
-
-				<form method="post" action="#">
-					<div class="row">
-						<div class="6u 12u$(mobile)">
-							<input type="text" name="name" placeholder="Name" />
-						</div>
-						<div class="6u$ 12u$(mobile)">
-							<input type="text" name="email" placeholder="Email" />
-						</div>
-						<div class="12u$">
-							<textarea name="message" placeholder="Message"></textarea>
-						</div>
-						<div class="12u$">
-							<input type="submit" value="Send Message" />
-						</div>
-					</div>
-				</form>
-
+				<p>If you would like to talk to us about any opportunities, please contact <a href="mailto:h0m3stuck3d@gmail.com">h0m3stuck3d@gmail.com</a>.</p>
 			</div>
 		</section>
 
@@ -239,7 +274,5 @@
 	<script src="/js/util.js"></script>
 	<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 	<script src="/js/main.js"></script>
-
 </body>
-
 </html>
