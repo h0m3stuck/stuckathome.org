@@ -1,3 +1,7 @@
 [submodule "themes/prologue"]
 	path = themes/prologue
 	url = https://github.com/sethmacleod/prologue
+[submodule "public"]
+	path = public
+	url = git@github.com:h0m3stuck/stuckathome.org
+	branch = gh-pages
