@@ -28,21 +28,25 @@
 			list-style-position: outside;
 			padding-left: 1em;
 		}
-		
+
 		/* The titles of the portfolio projects */
+
 		h3 {
 			text-align: center;
 		}
 
-		h4, h5, h6, strong {
+		h4,
+		h5,
+		h6,
+		strong {
 			font-weight: 500;
 		}
 
-		#main > section {
+		#main>section {
 			text-align: left;
 		}
 
-		#main > section.one {
+		#main>section.one {
 			background: url("/img/banner.png") repeat;
 		}
 	</style>
@@ -63,18 +67,16 @@
 			<!-- Nav -->
 			<nav id="nav">
 				<!--
+					Prologue's nav expects links in one of two formats:
 
-								Prologue's nav expects links in one of two formats:
+					1. Hash link (scrolls to a different section within the page)
 
-								1. Hash link (scrolls to a different section within the page)
+					   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
 
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+					2. Standard link (sends the user to another page/site)
 
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-
-							-->
+					   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+				-->
 				<ul>
 					<li>
 						<a href="#top" id="top-link" class="skel-layers-ignoreHref">
@@ -100,9 +102,7 @@
 			</nav>
 
 		</div>
-
 		<div class="bottom">
-
 			<!-- Social Icons -->
 			<ul class="icons">
 				{{ range .Site.Params.social }}
@@ -150,11 +150,12 @@
 						<article class="item">
 							<a href="https://github.com/h0m3stuck/akira" class="image fit">
 								<img src="/img/akira.png" alt="A privacy-friendly personal assistant" />
-							
+
 								<h3>Akira</h3>
 							</a>
 							<div class="portfolio-desc">
-								<p>A <strong>privacy-friendly</strong> personal assistant, written in Python 3.</p>
+								<p>A
+									<strong>privacy-friendly</strong> personal assistant, written in Python 3.</p>
 
 								<h4>Features</h4>
 								<ul class="list">
@@ -162,6 +163,29 @@
 									<li>Speech recognition using Google Speech APIs</li>
 									<li>Simple, modular API for adding new keywords and skills</li>
 								</ul>
+							</div>
+						</article>
+
+						<article class="item">
+							<a href="https://github.com/scintillating/litcoin" class="image fit">
+								<img src="/img/litcoin.png" alt="Litcoin logo" style="background-color: #303030; padding: 0.5em" />
+
+								<h3>Litcoin</h3>
+							</a>
+							<div class="portfolio-desc">
+								<p>An
+									<strong>incentivized peer review system</strong> using an Ethereum token.</p>
+
+								<h4>Features</h4>
+								<ul class="list">
+									<li>Uses ERC20 token LIT as payment</li>
+									<li>Off-chain storage through IPFS</li>
+									<li>Deployed on Rinkeby testnet for public usage</li>
+								</ul>
+
+								<p>This project won 3rd place at HackNEHS.</p>
+
+								<p>This project is continued at <a href="https://scintillate.me">Scintillating</a>.</p>
 							</div>
 						</article>
 					</div>
@@ -174,7 +198,8 @@
 								<h3>Duck Feed</h3>
 							</a>
 							<div class="portfolio-desc">
-								<p>A cross-platform <strong>RSS feed discoverer and reader</strong>, using DuckDuckGo to provide search results.</p>
+								<p>A cross-platform
+									<strong>RSS feed discoverer and reader</strong>, using DuckDuckGo to provide search results.</p>
 
 								<h4>Features</h4>
 								<ul class="list">
@@ -182,6 +207,33 @@
 									<li>Uses parallelism to find results faster</li>
 									<li>Has a built-in WebKit engine to show RSS entries as full HTML and play back video feeds</li>
 								</ul>
+							</div>
+						</article>
+
+						<article class="item">
+							<a href="https://github.com/h0m3stuck/quecoin" class="image fit">
+								<img src="/img/quecoin.png" alt="Quecoin logo" style="background-color: #303030; padding: 0.5em" />
+
+								<h3>Quecoin</h3>
+							</a>
+							<div class="portfolio-desc">
+								<p>A
+									<strong>distributed, incentivized Q&amp;A system</strong> running on the
+									<strong>
+										<a href="https://ethereum.org">Ethereum blockchain</a>
+									</strong> and using an
+									<a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md">ERC20 token</a>.</p>
+
+								<h4>Features</h4>
+								<ul class="list">
+									<li>Uncensorable, community-curated question asking and answering through an objective voting system</li>
+									<li>Uses QUE, an ERC20 token, as staking to incentivize good behavior</li>
+									<li>Total decentralization via Solidity smart contract logic and (planned) off-chain storage through IPFS</li>
+								</ul>
+
+								<p>This project won 3rd place in the experienced divison of MIT Blueprint 2018.</p>
+
+								<p>This project is continued at <a href="https://scintillate.me">Scintillating</a>.</p>
 							</div>
 						</article>
 					</div>
@@ -223,8 +275,6 @@
 						</article>
 					</div>
 				</div>
-
-
 			</div>
 		</section>
 
@@ -247,7 +297,9 @@
 					<li>Aneesh Edara, lead front-end programmer</li>
 					<li>Dylan Kim, the wildcard</li>
 					<li>Kevin Liu, back-end expert</li>
-					<li>Kunal Sharda, <em>Java master</em></li>
+					<li>Kunal Sharda,
+						<em>Java master</em>
+					</li>
 					<li>Tiger Tian, 5 FPS god</li>
 					<li>Will Hemond, apprentice front-end programmer</li>
 				</ul>
@@ -262,7 +314,8 @@
 					<h2>Contact</h2>
 				</header>
 
-				<p>If you would like to talk to us about any opportunities, please contact <a href="mailto:h0m3stuck3d@gmail.com">h0m3stuck3d@gmail.com</a>.</p>
+				<p>If you would like to talk to us about any opportunities, please contact
+					<a href="mailto:h0m3stuck3d@gmail.com">h0m3stuck3d@gmail.com</a>.</p>
 			</div>
 		</section>
 
@@ -294,4 +347,5 @@
 	<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 	<script src="/js/main.js"></script>
 </body>
+
 </html>
